@@ -14,10 +14,6 @@ import android.widget.Toast;
 
 import java.io.File;
 
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-
 /**
  * @Author: zhangyan
  * @Description:

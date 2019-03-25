@@ -145,7 +145,7 @@ public class DownloadTask extends AsyncTask<String, Integer, Integer> {
     }
 
     /**
-     * 通知最终的下载结果
+     * 通知最终的下载结果,回调操作
      * @param status
      */
     @Override
