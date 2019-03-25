@@ -20,7 +20,7 @@ import okhttp3.Response;
 
 /**
  * @Author: zhangyan
- * @Description:
+ * @Description:下载的服务对象
  * @Date: 2019/3/22 11:42
  * @Version: 1.0
  */
