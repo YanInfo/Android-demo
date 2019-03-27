@@ -71,6 +71,10 @@ public class DownloadService extends Service {
         return mDownloadBinder;
     }
 
+    /**
+     * 定义一个Binder对象来控制下载，来决定何时开始下载，随时查看下载进度
+     * Binder对象是为了进程通信，我们可以理解为是进程通信的管理员，原理很复杂的
+     */
     class DownloadBinder extends Binder {
         public void startDownload(String url) {
             if (mDownloadTask == null) {
@@ -126,7 +130,7 @@ public class DownloadService extends Service {
             if (progress > 0) {
                 //进度大于等于0时才需要显示下载进度
                 builder.setContentText(progress + "%");
-                builder.setProgress(100, progress, false);//参数：最大进度，当前进度，是否使用模糊进度条
+                builder.setProgress(100, progress, false); //参数：最大进度，当前进度，是否使用模糊进度条
             }
             return builder.build();
     }
