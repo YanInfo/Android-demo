@@ -10,18 +10,24 @@
        android:id="@+id/start_download"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:text="Start download"/>
+       android:text="Start download"
+       android:layout_marginTop="10dp"
+       android:background="@color/button" />
 
     <Button
         android:id="@+id/pause_download"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="pause download"/>
+        android:text="pause download"
+        android:layout_marginTop="10dp"
+        android:background="@color/button" />
 
     <Button
         android:id="@+id/cancel_download"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="cancel download"/>
+        android:text="cancel download"
+        android:layout_marginTop="10dp"
+        android:background="@color/button" />
 
 </LinearLayout>
