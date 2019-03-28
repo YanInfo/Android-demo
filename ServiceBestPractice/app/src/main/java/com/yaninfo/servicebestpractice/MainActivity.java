@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // 获取DownloadBinder实例
     private DownloadService.DownloadBinder downloadBinder;
 
-    private ServiceConnection connection = new ServiceConnection() {
+    private ServiceConnection mConnection = new ServiceConnection() {
         //活动与服务成功绑定时调用
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initView();
         Intent intent = new Intent(this, DownloadService.class);
         startService(intent);   //启动服务
-        bindService(intent, connection, BIND_AUTO_CREATE);  //绑定服务
+        bindService(intent, mConnection, BIND_AUTO_CREATE);  //绑定服务
         //动态申请权限，下载文件到SD卡需要权限
         if (ContextCompat.checkSelfPermission(MainActivity.this,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
@@ -105,6 +105,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unbindService(connection);
+        unbindService(mConnection);
     }
 }
